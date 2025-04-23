@@ -1,4 +1,4 @@
-# Multiple LLM model for Environmental News (Stitching Project)
+# Advanced RAG for Environmental News
 
 ## 📘 Project Overview
 
