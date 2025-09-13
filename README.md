@@ -1,6 +1,6 @@
 # Advanced RAG for Environmental News
 
-## 📘 Project Overview
+## Project Overview
 
 This project implements an **Advanced Retrieval-Augmented Generation (RAG) Assistant** for answering questions based on a curated dataset of **environmental news articles**. It extends previous modules by integrating:
 
