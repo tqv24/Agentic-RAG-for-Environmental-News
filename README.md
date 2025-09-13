@@ -9,6 +9,9 @@ This project implements an **Advanced Retrieval-Augmented Generation (RAG) Assis
 - A **Streamlit-based frontend for live evaluation**.
 - A **qualitative comparison** of multiple LLM systems.
 
+
+![Uploading ChatGPT Image Sep 13, 2025, 09_57_47 PM.png…]()
+
 Project structure:
 ```bash
 stitching/
@@ -26,9 +29,9 @@ stitching/
 
 ---
 
-## 🧩 Key System Components
+## Key System Components
 
-### 📄 1. Document Retrieval with ChromaDB + Pinecone
+### 1. Document Retrieval with ChromaDB + Pinecone
 
 - Processes the environmental news dataset: [`news.csv`](https://drive.google.com/file/d/1tXx6sEmIV127Jm5VVXhBFY9uy9NCI0P9/view?usp=sharing).
 - Splits documents into **250-token chunks** with **50 overlap** using `RecursiveCharacterTextSplitter`.
@@ -36,7 +39,7 @@ stitching/
   - `ChromaDB` for local document retrieval.
   - `Pinecone` for remote indexing with `text-embedding-3-small`.
 
-### 🤖 2. Multi-Agent Workflow with LangGraph
+### 2. Multi-Agent Workflow with LangGraph
 
 The system defines a graph-based workflow with the following agents:
 
@@ -48,7 +51,7 @@ The system defines a graph-based workflow with the following agents:
 
 If insufficient relevance is detected, the workflow loops and regenerates.
 
-### 🧪 3. Multi-Model Evaluation
+### 3. Multi-Model Evaluation
 
 The system compares four different models:
 
@@ -66,30 +69,30 @@ Each answer is evaluated on:
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
-### 📁 1. Clone the Project
+### 1. Clone the Project
 
 ```bash
 git clone <your-repo-url>
 cd stitching
 ``` 
 
-### 🔐 2. Setup API Keys
+### 2. Setup API Keys
 Create a .env file:
 ```ini
 OPENAI_API_KEY=your_openai_key
 PINECONE_API_KEY=your_pinecone_key
 ```
 
-### ⚙️ 3. Run with Docker (Recommended)
+### 3. Run with Docker (Recommended)
 Build and run the container:
 ```bash
 docker build -t streamlit-llm-eval .
 docker run --env-file .env -p 8501:8501 streamlit-llm-eval
 ```
 
-### 🧪 4. Or Run the Unit Test locally (Dev Mode)
+### 4. Or Run the Unit Test locally (Dev Mode)
 ```bash
 pip install -r requirements.txt
 streamlit run main.py
