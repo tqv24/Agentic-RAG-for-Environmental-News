@@ -10,8 +10,7 @@ This project implements an **Advanced Retrieval-Augmented Generation (RAG) Assis
 - A **qualitative comparison** of multiple LLM systems.
 
 
-![Uploading ChatGPT Image Sep 13, 2025, 09_57_47 PM.png…]()
-
+![alt text](<image.png>)
 Project structure:
 ```bash
 stitching/
